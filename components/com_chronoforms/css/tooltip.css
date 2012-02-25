@@ -1,0 +1,14 @@
+.tool-tip{
+z-index:9999;
+width: 280px;
+background-color:#f6f6f6;
+border:8px solid #eeeeee;
+padding:8px !important;
+text-shadow:0 1px 0 #fff;
+display:none;
+}
+.tool-tip .tool-title{
+	font-weight: bold;
+	background: none !important;
+	padding:0px !important;
+}

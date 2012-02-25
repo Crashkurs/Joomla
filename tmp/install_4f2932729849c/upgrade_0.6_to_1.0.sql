@@ -1,0 +1,2 @@
+ALTER TABLE mos_users ADD registerDate datetime NOT NULL default '0000-00-00 00:00:00' AFTER gid;
+ALTER TABLE mos_users ADD lastvisitDate datetime NOT NULL default '0000-00-00 00:00:00' AFTER registerDate;

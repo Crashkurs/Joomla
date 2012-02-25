@@ -1,0 +1,9 @@
+To use the Plugins goto 
+
+vBulletin Options->vBulletin Options and activate.
+
+To upload the plugins goto
+
+Plugin System->Download/Upload Plugins
+
+That's all

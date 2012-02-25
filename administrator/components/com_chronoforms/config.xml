@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="showtipoftheday" type="radio" default="1" label="Show Tip Of The Day" description="Select If you want to show or hide the tip of the day box in the forms manager">
+			<option value="1">Enabled</option>
+			<option value="0">Disabled</option>
+		</param>
+		<param name="licensecode" type="text" menu="hide" size="50" default="" label="License Code" description="Enter the license code you acquired from ChronoEngine.com here" />	
+		<param name="curlproxy" type="text" menu="hide" size="50" default="" label="Proxy(leave empty if you don't know)" description="Does your website need a proxy to connect to the internet ? this is usually configured at your web server and usually is not the case" />	
+	</params>
+</config>

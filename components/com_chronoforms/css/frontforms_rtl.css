@@ -1,0 +1,119 @@
+/*
+ * ChronoCMS (chronocms.com)
+ * Copyright 2010 - chronocms.com
+ * license : Commercial
+ * Redistributions of files must retain the above copyright notice.
+ */
+/*================   FORMS STYLES   =================*/
+
+.ccms_form_element p { margin-bottom: 9px;}
+.ccms_form_element input, textarea, input[type="file"]  {padding: 6px !important;  border: 1px solid #d3d3d3; margin-bottom: 5px; }
+.ccms_form_element select { padding: 3px; border: 1px solid #d3d3d3; min-width: 100px;}
+/*.ccms_form_element select { min-width: 163px; }*/
+.ccms_form_element label { float: right; width: 150px; line-height: 18px; margin: 6px 0 9px ; font-weight: bold;}
+.ccms_form_element fieldset  {
+background-color:#FAFAFA;
+border:1px solid #EEEEEE;
+padding:15px;
+width:auto; }
+.ccms_form_element fieldset legend {font-weight:bold; margin-left:-10px; padding:10px; }
+
+.ccms_form_element { margin-bottom: 10px; position: relative; padding: 10px 0px 10px 5px; /*border-bottom: 1px solid #dddddd;*/ clear: both;}
+
+.cfdiv_select select,
+/*.cfdiv_text input, .cfdiv_text label { float: left; }*/
+.cfdiv_text label { width: 150px; }
+
+
+.small-message, .error-message { line-height: 18px; margin: 4px 0 0 155px; font-size: 11px; display: block; clear: both;}
+.small-message { color: #999999; font-style: italic; }
+.error-message { color: red;}
+.required input { border-color: #cccccc; background-color: #f9f9f9;}
+.form-error { background-color: #fff4f4; border: 1px solid #ffd4d4;}
+
+
+.tooltipimg { position: absolute; top: 5px; right: 10px; line-height: 21px;  color: #999999; }
+.tooltipimg a {display: inline-block; font-weight: bold; color: #999999; line-height: 21px; height: 20px; background-color: #eeeeee; width: 20px; text-align: center;}
+.tooltipimg a:hover { color: white; text-decoration: none;}
+
+
+.cfdiv_checkboxgroup label, .cfdiv_radiogroup label, 
+.cfdiv_checkbox label, .cfdiv_radio label { font-weight: normal; /*margin-bottom: 5px;*/margin: 6px 0 9px; }
+.full_label {width: 70% !important;}
+.cfdiv_checkboxgroup label:first-child, .cfdiv_radiogroup label:first-child, 
+.cfdiv_checkbox label:first-child , 
+.cfdiv_radio label:first-child, 
+.cfdiv_checkbox label:first-child,
+.cfdiv_checkboxgroup label:first-child { font-weight: bold !important; margin-bottom: 9px;}
+
+.ccms_form_element .button { 
+	background-color: #37a8f0; 
+	border: 0;
+	padding: 5px 7px;
+	font-size: 11px; 
+	color: white;
+	text-decoration: none; 
+} 
+  
+.ccms_form_element .button:hover {
+	background-color: #999999; 
+ 	text-decoration: none;
+ 	}
+
+
+/* input sizes */
+.small_input { width: 200px;}
+.medium_input { width: 350px !important; }
+.big_input, .title_input { width:475px; }
+.title_input { padding: 8px 5px; font-size: 18px; margin-bottom: 15px; float: right !important;}
+
+
+/* input types */
+.ccms_form_element input[type="checkbox"], 
+/*.ccms_form_element input[type="radio"] { border-color: transparent; margin: 8px 9px 0 0; clear: none; }*/
+.ccms_form_element input[type="radio"] { padding: 0 0 0 0 !important; background-color: transparent; border-color: transparent; margin: 10px 5px 10px 5px; clear: none; }
+
+/* fixes for radio and checkboxes*/
+.cfdiv_checkboxgroup label, .cfdiv_radio label { width: auto; margin-right: 25px;  }
+.cfdiv_checkboxgroup label:first-child, .cfdiv_radio label:first-child { width: 150px; margin-right: 0;}
+.cfdiv_checkboxgroup label, .cfdiv_radio label,
+.cfdiv_checkboxgroup input, .cfdiv_radio input { float: right; }
+
+.label_right{float: right; margin-left: 150px !important;}
+
+
+.label_over label:first-child { float: none !important;  }
+.label_over label:first-child { display: block; }
+.label_over .small-message, .label_over .error-message {  margin-left: 0;}
+
+.radios_over label, .radios_over input {
+    float: right !important;
+}
+.radios_over input {
+    clear: right !important;
+}
+
+/* other fixes */
+.fc-tbx{
+	z-index:9999;
+}
+.validation_label{
+	display:block;
+	width:100%;
+}
+.chrono_captcha_input{
+	vertical-align:top;
+}
+
+/*.clear{
+	clear:both;
+	visibility:hidden;
+}*/
+
+.clear:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}

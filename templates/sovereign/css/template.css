@@ -1,0 +1,234 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  min-width: 1080px;
+  background-image: url(/templates/sovereign/images/wrapper-bg-high-resolution.jpg);
+}
+.foreground{
+  background-repeat: no-repeat;
+  background-image: url(/templates/sovereign/images/sith2.jpg);
+  }
+.header{
+  height: 290px;
+  background-repeat: no-repeat;
+}
+.logo{
+  height: 220px;
+  min-width: 1015px;
+  text-align: center;
+}
+.menu_center{
+  height: 80px;
+  list-style-type: none;
+  background-image: url(/templates/sovereign/images/menue.gif);
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+.menu_center ul {
+  padding-top: 23px;
+  }
+.menu_center ul li{
+  -moz-border-radius: 20px;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  display: inline;
+  font-size: 24px;
+  color: black;
+  background-color: grey;
+  }
+.menu_center ul .active{
+  background-color: black;
+  }
+.menu_center ul li a{
+  color: #5c2c13;
+  text-decoration: none;
+  }
+.menu_center ul li:hover{
+  background-color:red;
+  }
+.latestusers {
+  list-style-type: none;
+  padding-left: 150px;
+  font-size: 26px;
+  }
+  
+  
+  
+  
+  
+  
+
+.wrapper{
+  padding-left: 5%;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  margin-bottom: 30px;
+  min-height: 920px;
+  }
+.login{
+  -moz-border-radius: 20px;
+  padding-top: 10px;
+  background-color: #cccccc;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+  opacity: 0.7;
+  float: left;
+  width: 15%;
+  min-width: 191px;
+  height: 200px;
+  }
+.login ul{
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+  }
+.login ul a:visited, .login a:visited{
+  color: black;
+  }
+.login ul a:hover, .login a:hover{
+  color: red;
+  }
+.submenu{
+  -moz-border-radius: 20px;
+  background-color: #cccccc;
+  opacity: 0.7;
+  position: absolute;
+  margin-top: 220px;
+  min-height: 110px;
+  width: 14.25%;
+  min-width: 190px;
+  }
+.submenu .menu{
+  list-style-type: none;
+  margin-top: 20px;
+  margin-left: 5px;
+  }
+.submenu ul li{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  }
+.submenu ul li a{
+  text-decoration: none;
+  color: green;
+  }
+.submenu ul li ul{
+  padding-left: 25px;
+  }
+.submenu ul li ul li{
+  padding-top: 5px;
+  margin-bottom: 5px;
+  }
+.submenu ul li ul li a{
+  text-decoration: none;
+  color: green;
+  }
+.submenu ul li a:hover{
+  color: red;
+  }
+.userdata{
+  padding-top: 20px;
+  border-width: 0px;
+  }
+.userdata p ul li{
+  list-style-type: none;
+  text-decoration: none;
+  }
+.userdata ul li a:visited{
+  color: black;
+  }
+.content{
+  -moz-border-radius: 20px;
+  float: left;
+  width: 60%;
+  background-color: #dccccc;
+  opacity: 0.7;
+  min-height: 808px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  }
+.edit-icon{
+  float: right;
+  }
+.item-page, .blog-featured{
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+.item-page .published{
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  }
+.items-leading * p, .item-page p, .item p{
+  padding-top: 20px;
+  }
+.leading-0, .item{
+  padding: 5px 3px 15px 15px;
+  -moz-border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  }
+.actions{
+  list-style-type: none;
+  }
+.article-info-term, .blog-featured h1{
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+  }
+.news{
+  -moz-border-radius: 20px;
+  background-color: #cccccc;
+  opacity: 0.7;
+  float: left;
+  width: 15%;
+  min-height: 400px;
+  }
+.news table{
+  border-width: 5px;
+  -moz-border-radius: 20px;
+  margin-top: 25px;
+  margin-left: 5px;
+  }
+#modlgn-passwd{
+  margin-left: 35px;
+  }
+form ul{
+  list-style-type: none;
+  }
+form ul li a{
+  text-decoration: none;
+  }
+form ul li a:hover{
+  color: red;
+  }
+form ul li a{
+  color: black;
+  }
+.rights{
+  color: white;
+  }
+input.bewerbung0{
+  color: red;
+  }
+input.bewerbung1{
+  color: orange;
+  }
+input.bewerbung2{
+  color: yellow;
+  }
+input.bewerbung3{
+  color: green
+  }
+input.bewerbung4{
+  color: red;
+  }
+
+

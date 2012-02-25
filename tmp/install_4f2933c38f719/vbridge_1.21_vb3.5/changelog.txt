@@ -1,0 +1,203 @@
+
+
+Joomla vbridge 1.21
+
+2005/10/30
+
+Bugfix: Cookie issues in Joomla file
+Bugfix: Cookie issues in plugin
+Bugfix: uninstall will not drop vb_userid and vb_threadid
+Bugfix: Server load issues by sync
+
+Joomla vbridge 1.2
+
+2005/10/27
+
+Changes: Codecleaning
+Added: Extra check for config.php patch
+Bugfix: Pluginprobs
+Bugfix: Multidatabase issue with Joomla! User Component
+Bugfix: #27 xhtml error for getting the Version - reported by Ritter
+Bugfix: #25 missing function isThemePatched - reported by Ritter
+
+
+
+Joomla vbridge Final 1.1
+
+2005/09/26
+
+Changes: Codecleaning and optimizing through Core API function
+Changes: Works with Joomla! 1.0.2
+Changes: Version for vBulletin 3.5 Gold works now only with pluginsystem
+Added: Multidatabase ability ( but same Server ) 
+
+Joomla vbridge Final 1.0
+
+2005/09/26
+
+Changes: Codecleaning and optimizing through Core API function
+Changes: Works now with Joomla! 1.0.1
+Changes: Version for vBulletin 3.5 RC3 works now only with pluginsystem
+Bugfixes: several 
+
+vbridge RC 3
+
+2005/09/04
+
+Bugfix: Logout directed to the other System i.e. if you logout from mambo your where redirected to the forum without return, logout from the forum
+redirected you to mambo to get loged out there with no return.
+Added: Turky language thanks to Deniz Senturk aka Anarchy 
+Added: Now also sync Mambo User to vBulletin 
+Added: Now able to sync more than once
+
+
+vbridge RC 2
+
+2005/08/24
+
+Bugfix: Patchhandler Versioncheck didn`t check vB 3.5 right - reported by goanna
+Bugfix: Emailcheck error during sync of User - reported by stefaandk
+Bugfix: #4 Registration Issue,"Registration Mode: Use Mambo" For VB it still takes me to VB and for mambo to mambo. - reported by vivpuri
+Bugfix: #5 Auto login for new Member ( Registration without Enailverification ) - reported by vivpuri
+Bugfix: #6 During installation of vBulletin bridge the users were synced EXCEPT the mambo passwords in #__users where the password field does not match the vBulletin password field after the sync. - reported by bugfaceuk
+Bugfix: #7 vBulletin does not require a table prefix during installation, but in the configuration of vBridge it REQUIRES that you supply one. - reported by bugfaceuk
+Bugfix: #8 Component picking up wrong ItemId, if there where trashed items - reported by bugfaceuk
+Added: Italien language thanks to Andrea "StaRise" Brandi 
+Added: During Sync vB User to mambo the vB Admin becomes also mambo Admin.
+
+vbridge RC 1
+
+2005/08/11
+
+Bugfix: Typerror in the install.vbridge so wrong value for MOS_PREFIX in config.php - reported by odsign
+BUgfix: Searchpattern overworked for wrapped and unwrapped mode.
+Added: Check if wrapped or unwrapped mode unneeded "not installed" are hide save confusion
+Added: Version check Patchhandler only the Patches for the used vBulletin Version are installable.
+
+vbridge Beta 1.12
+
+2005/08/05
+
+Bugfix: Typerror in the vbridge.xml - reported by vivpuri
+Added: new field to mos_user table to better sync both usertables
+Added: sync function to import/merge the user table works only from vb to mambo
+Added: vBUlletin 3.5RC2 support
+
+
+vbridge Beta 1.11
+
+2005/08/02
+
+Bugfix: Typerror in the install.vbridge.php - reported by stefaandk
+Bugfix: PM Bug again - reported by vivpuri
+Bugfix: TRUNCATE mambo usertable to have a new AUTO_INCREMENT
+Bugfix: profile.php changing password or email - reported by justinkwaught
+Added: block=1 by vbgroup 4 - requested by rsuplido
+Added: block=1 by groupchanges to 1,3,4,8 - requested by rsuplido
+Added: vBUlletin 3.5RC1 support
+Added: spanish language - thanks to aoricci2
+
+vbridge Beta 1.10
+
+2005/07/27
+
+Bugfix: Typerror in the functions.vbridge.php - reported by rsuplido
+Bugfix: Some Typerrors in vbridgeMod_1.02.zip - reported by rsuplido
+Added: Email and Password changes in profile.php has now effect to Mambo usertable.
+Added: Using add, edit, delete and prune in AdminCP will have effect to Mambo usertable.
+
+
+vbridge Beta 1.09
+
+2005/07/25
+
+Added: Use now the Cookieprefix from the vBulletin config, so no fixed Cookieprefix anylonger in the Mambofiles for vBulletin.
+Added: mambot Button for the vBridge Discussionbot.
+Added: vBulletin registration now available.
+Modified: mod_vbridge_login to support optional registration ( vbulletin <-> Mambo )
+
+
+vbridge Beta 1.08
+
+2005/07/22
+
+Bugfix: New bug for PMs - reported by vivpuri again 
+Bugfix: If you convert a thread into sticky... - reported by vivpuri again
+Bugfix: If you try to subscribe to... -  reported by vivpuri again
+Bugfix: Admincp: If i try to login to the admincp of VB from... - reported by vivpuri. Should work now Forum url or from Component
+Bugfix: Modcp: I am logged in as admin... - reported by vivpuri
+Bugfix: Quicklinks: Buddylist... - reported by vivpuri
+Bugfix: Replies: Click on any of those numbers... - reported by vivpuri
+Bugfix: Online view: Reload page...
+Bugfix: Fix search pattern for the Template index.php
+Bugfix: clicking on the username of the thread author when viewing... - reported by justinkwaugh
+Bugfix: problem with the "view first unread" - reported by justinkwaugh
+
+vbridge Beta 1.07
+
+2005/07/20
+
+Bugfix: New bug for PMs - reported by vivpuri
+Bugfix: If you convert a thread into sticky... - reported by vivpuri
+Bugfix: If you try to subscribe to... -  reported by vivpuri
+Bugfix: Display Modes for thread are not working - reported by vivpuri
+Bugfix: If set Redirect to forum by login doesn`t work. 
+Bugfix: If you click on "Top" nothing happens - reported by vivpuri.
+Bugfix: Also clicking on the username of the author of a post gives error - reported by justinkwaugh
+Bugfix: This one still happens if i click on "Calender" and login... - reported by vivpuri
+
+vbridge Beta 1.06
+
+2005/07/18
+
+Bugfix: PM`s not shown reported by vivpuri
+Bugfix: FAQ`s not shown reported by vivpuri
+Bugfix: Avatar`s not shown reported by justinkwaugh
+Bugfix: Manage attachments bug reported by justinkwaugh
+Add: Enable Wrapped and unpwrapped Mode
+
+mod_vbridge_login:
+
+Add: Communitybuilder compatibilty
+
+mod_vbridge_recents_post:
+
+Bugfix: Now show only one topic not multiple reported by vivpuri
+
+
+
+vbridge Beta 1.05
+
+2005/07/18
+
+Add: Autodetect in the vb function for the URL
+
+
+
+vbridge Beta 1.04
+
+2005/07/14
+
+Add: delete,edit,add User in Mambo Backend will effect the same to the vB user
+
+
+vbridge Beta 1.03
+
+2005/07/14
+
+Bugfix: XML Error
+
+
+vbridge Beta 1.02
+
+2005/07/13
+
+Bugfix: login/logout error
+Bugfix: link errors
+
+vbridge Beta 1.01
+
+2005/07/13:
+
+Add: Packagemanager from SMF as Patchhandler to vBridge
+Add: XML Mod file for patching

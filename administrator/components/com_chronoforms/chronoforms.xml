@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>ChronoForms</name>
+	<creationDate>31 Jan 2012</creationDate>
+	<author>Chronoman</author>
+	<copyright>ChronoEngine.com 2011</copyright>
+	<authorEmail>webmaster@chronoengine.com</authorEmail>
+	<authorUrl>www.chronoengine.com</authorUrl>
+	<version>4.0 RC3.11</version>
+	<license>GPL</license>
+	<description>Create everytype of Forms with whatever features you like!!</description>
+
+	<installfile>install.chronoforms.php</installfile>
+	<uninstallfile>uninstall.chronoforms.php</uninstallfile>
+	<files>
+		<filename>chronoforms.php</filename>
+		<filename>chronoforms.html.php</filename>
+		<filename>chrono_verification.php</filename>
+		<filename>default.ttf</filename>
+		<filename>background.png</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>uploads</folder>
+		<folder>libraries</folder>
+		<folder>js</folder>
+		<folder>views</folder>
+	</files>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.chronoforms.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.chronoforms.sql</file>
+		</sql>
+	</uninstall>	
+	<administration>		
+		<menu img="components/com_chronoforms/CF.png">COM_CHRONOFORMS</menu>
+		<submenu>
+			<menu>COM_CHRONOFORMS_FORMS_MANAGER</menu>
+			<menu task="form_wizard">COM_CHRONOFORMS_WIZARD</menu>
+			<menu task="form_wizard&amp;wizard_mode=easy">COM_CHRONOFORMS_EASY_WIZARD</menu>
+			<menu task="validatelicense">COM_CHRONOFORMS_VALIDATE</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>admin.chronoforms.php</filename>
+			<filename>admin.chronoforms.html.php</filename>
+			<filename>chronoforms.class.php</filename>
+			<filename>toolbar.chronoforms.php</filename>
+			<filename>toolbar.chronoforms.html.php</filename>
+			<filename>install.chronoforms.sql</filename>
+			<filename>uninstall.chronoforms.sql</filename>
+			<filename>CF.png</filename>
+			<filename>config.xml</filename>
+			<filename>index.html</filename>
+			<folder>css</folder>
+			<folder>js</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>versions</folder>
+			<folder>images</folder>
+			<folder>helpers</folder>
+			<folder>form_actions</folder>
+			<folder>form_elements</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_chronoforms.sys.ini</language>
+			<language tag="en-GB">language/en-GB.com_chronoforms.menu.ini</language>
+			<language tag="en-GB">language/en-GB.com_chronoforms.ini</language>
+		</languages>
+	</administration>
+</extension>

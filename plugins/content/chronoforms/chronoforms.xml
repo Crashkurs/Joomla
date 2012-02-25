@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="1.6.0" group="content">
+	<name>chronoforms</name>
+	<author>ChronoEngine.com</author>
+	<creationDate>26 Dec 2011</creationDate>
+	<copyright>(C) ChronoEngine.com</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>webmaster@chronoengine.com</authorEmail>
+	<authorUrl>www.chronoengine.com</authorUrl>
+	<version>V4 RC3.0</version>
+	<description><![CDATA[
+	This plugin must have ChronoForms component in order for it to work.
+	You just need to put the name of the form you want to show between : {chronoforms}&{/chronoforms}, Example: {chronoforms}form1{/chronoforms} where form1 is the form name which will be displayed!!
+	]]></description>
+	<files>
+		<filename plugin="chronoforms">chronoforms.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="after_text_forms" type="textarea" rows="10" cols="50" default="" label="After Text Forms" description="Enter the forms to be shown after article text in specific categories, multi line format: form_name=1,5,7"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

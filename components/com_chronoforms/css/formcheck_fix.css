@@ -1,0 +1,8 @@
+.fc-tbx .tl, .fc-tbx .t, .fc-tbx .tr, .fc-tbx .l, .fc-tbx .c, .fc-tbx .r, .fc-tbx .bl, .fc-tbx .b, .fc-tbx .br{
+	padding:0px !important;
+}
+
+.fc-tbx *{
+	padding:0px !important;
+	border: none !important;
+}

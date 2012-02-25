@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<plugins>
+	<plugin active="1" product="vbulletin">
+		<title>Login for Joomla via Cookie</title>
+		<hookname>login_process</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+
+if (!$cookieuser)
+{
+     $lifetime = time() + 43200;
+} else {
+     $lifetime = time() + 365*24*60*60;
+}
+$vbulletin->db->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$vbulletin->db->select_db(MOS_NAME);
+
+$mosuser = $vbulletin->db->query_first("SELECT id FROM ".MOS_PREFIX."users WHERE vb_userid='".$vbulletin->userinfo['userid']."'"); 
+	
+setcookie( "usercookie[username]", $vbulletin->userinfo['username'], $lifetime, "/" );
+setcookie( "usercookie[password]", $vbulletin->userinfo['password'], $lifetime, "/" );
+setcookie( "userid", $mosuser['id'], $lifetime, "/" );
+if (!$cookieuser)
+{
+	setcookie( $vbulletin->config['Misc']['cookieprefix']."userid", $vbulletin->userinfo['userid'], $lifetime, "/" );
+} 
+
+$vbulletin->db->db_connect($vbulletin->config['MasterServer']['servername'],
+    $vbulletin->config['MasterServer']['port'],
+    $vbulletin->config['MasterServer']['username'],
+    $vbulletin->config['MasterServer']['password'],
+    $vbulletin->config['MasterServer']['usepconnect'] );
+$vbulletin->db->select_db($vbulletin->config['Database']['dbname']);
+
+//<!-- End Joomla-vBridge from WH-SOLUTION -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Prune also Joomla user</title>
+		<hookname>useradmin_prune</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+$db->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$db->select_db(MOS_NAME);
+
+
+		$aroid=array();
+        $user_ids=array();
+        $mbuser = $db->query_read("SELECT * FROM ".MOS_PREFIX."users WHERE vb_userid = IN($userids)");
+        $user_ids=$mbuser['id'];
+        $db->query_write("DELETE FROM " . MOS_PREFIX . "users WHERE id = IN($user_ids)");
+        $aro_id = $db->query_read("SELECT * FROM ".MOS_PREFIX."core_acl_aro WHERE value = IN($user_ids)");
+        $aroid=$aro_id['aro_id'];
+        $db->query_write("DELETE FROM " . MOS_PREFIX . "core_acl_aro WHERE value = IN($user_ids)");
+        $db->query_write("DELETE FROM " . MOS_PREFIX . "core_acl_groups_aro_map WHERE aro_id = IN($aroid)");
+
+$db->db_connect($vbulletin->config['MasterServer']['servername'],
+    $vbulletin->config['MasterServer']['port'],
+    $vbulletin->config['MasterServer']['username'],
+    $vbulletin->config['MasterServer']['password'],
+    $vbulletin->config['MasterServer']['usepconnect'] );
+$db->select_db($vbulletin->config['Database']['dbname']);
+
+//<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Logout from Joomla and vBulletin</title>
+		<hookname>logout_process</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+      		$lifetime = time() - 1800;
+		setcookie( "usercookie[username]", " ", $lifetime, "/" );
+		setcookie( "usercookie[password]", " ", $lifetime, "/" );
+		setcookie( "usercookie", " ", $lifetime, "/" );
+		setcookie( "sessioncookie", " ", $lifetime, "/" );
+		@session_destroy();
+        //<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Reset Password in login</title>
+		<hookname>reset_password</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+
+$db->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$db->select_db(MOS_NAME);
+
+        $db->query_write("UPDATE " . MOS_PREFIX. "users SET password='" . addslashes(md5(md5($newpassword) . $userinfo['salt'])) . "' WHERE vb_userid='$userinfo[userid]'");
+
+$db->db_connect($vbulletin->config['MasterServer']['servername'],
+    $vbulletin->config['MasterServer']['port'],
+    $vbulletin->config['MasterServer']['username'],
+    $vbulletin->config['MasterServer']['password'],
+    $vbulletin->config['MasterServer']['usepconnect'] );
+$db->select_db($vbulletin->config['Database']['dbname']);
+//<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Update Password for Joomla User</title>
+		<hookname>profile_updatepassword_complete</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+		if (!empty($vbulletin->GPC['newpassword']) OR !empty($vbulletin->GPC['newpassword_md5']) OR $vbulletin->GPC['email'] != $vbulletin->userinfo['email']){
+	
+
+$db->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$db->select_db(MOS_NAME);
+
+if ($vbulletin->GPC['email'] != $vbulletin->userinfo['email'])
+        {
+            $newmbpassword = "password = '" . $userdata->fetch_field('password') . "',";
+            $newemail = "email = '". $vbulletin->GPC['email'] . "'";
+        } else {
+            $newmbpassword = "password = '" . $userdata->fetch_field('password') . "'";
+            $newemail = "";
+        }
+	    $db->query_write("UPDATE " . MOS_PREFIX . "users SET $newmbpassword $newemail WHERE vb_userid=" . $vbulletin->userinfo['userid'] . "");
+
+$db->db_connect($vbulletin->config['MasterServer']['servername'],
+    $vbulletin->config['MasterServer']['port'],
+    $vbulletin->config['MasterServer']['username'],
+    $vbulletin->config['MasterServer']['password'],
+    $vbulletin->config['MasterServer']['usepconnect'] );
+$db->select_db($vbulletin->config['Database']['dbname']);
+}
+//<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Complete Addmember to Joomla</title>
+		<hookname>register_addmember_complete</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+
+$db->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$db->select_db(MOS_NAME);
+
+	if ($newusergroupid == 2) $block=0;
+        if ($newusergroupid == 3) $block=1;
+        if ($newusergroupid == 4) $block=1;
+        $registerDate = date("Y-m-d H:i:s");
+
+        $db->query_write("
+			INSERT INTO " . MOS_PREFIX. "users
+				(name, username, email, password, usertype, block, sendEmail, gid,
+				registerDate, lastvisitDate, activation, params, vb_userid)
+			VALUES
+				(
+				'".$vbulletin->GPC['username']."',
+				'".$vbulletin->GPC['username']."',
+				'".$vbulletin->GPC['email']."',
+				'".$userdata->fetch_field('password')."',
+				'Registered',
+				$block,
+				'0',
+				'18',
+				'$registerDate',
+				'0',
+				'',
+				'',
+				$userid
+			)
+		");
+        $user_id = $db->insert_id();
+        $db->query_write("
+			INSERT INTO " . MOS_PREFIX. "core_acl_aro
+				(section_value, value, order_value, name, hidden)
+			VALUES
+				('users',
+				$user_id,
+				'0',
+				'".$vbulletin->GPC['username']."',
+				'0'
+			)
+		");
+        $aro_id = $db->insert_id();
+        $db->query_write("
+			INSERT INTO " . MOS_PREFIX. "core_acl_groups_aro_map
+				(group_id, section_value, aro_id)
+			VALUES
+				('18',
+				'',
+				'".$aro_id."'
+			)
+		");
+
+$db->db_connect($vbulletin->config['MasterServer']['servername'],
+    $vbulletin->config['MasterServer']['port'],
+    $vbulletin->config['MasterServer']['username'],
+    $vbulletin->config['MasterServer']['password'],
+    $vbulletin->config['MasterServer']['usepconnect'] );
+$db->select_db($vbulletin->config['Database']['dbname']);
+//<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Activate Joomla User</title>
+		<hookname>register_activate_process</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+$db->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$db->select_db(MOS_NAME);
+
+$db->query_write("UPDATE " . MOS_PREFIX . "users SET block='0', activation='' WHERE vb_userid=$userinfo[userid]");
+
+$db->db_connect($vbulletin->config['MasterServer']['servername'],
+    $vbulletin->config['MasterServer']['port'],
+    $vbulletin->config['MasterServer']['username'],
+    $vbulletin->config['MasterServer']['password'],
+    $vbulletin->config['MasterServer']['usepconnect'] );
+$db->select_db($vbulletin->config['Database']['dbname']);
+//<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Delete Joomla User</title>
+		<hookname>userdata_delete</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+$this->dbobject->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$this->dbobject->select_db(MOS_NAME);
+
+		    $user_id = $this->dbobject->query_first("SELECT * FROM ".MOS_PREFIX."users WHERE vb_userid = " . $this->existing['userid'] . "");
+            $user_mbid=$user_id['id'];
+            $this->dbobject->query_write("DELETE FROM " . MOS_PREFIX . "users WHERE id = $user_mbid");
+            $aro_id = $this->dbobject->query_first("SELECT * FROM ".MOS_PREFIX."core_acl_aro WHERE value = $user_mbid");
+            $aroid=$aro_id['aro_id'];
+            $this->dbobject->query_write("DELETE FROM " . MOS_PREFIX . "core_acl_aro WHERE value = $user_mbid");
+		    $this->dbobject->query_write("DELETE FROM " . MOS_PREFIX . "core_acl_groups_aro_map WHERE aro_id = $aroid");
+$this->dbobject->db_connect($this->registry->config['MasterServer']['servername'],
+    $this->registry->config['MasterServer']['port'],
+    $this->registry->config['MasterServer']['username'],
+    $this->registry->config['MasterServer']['password'],
+    $this->registry->config['MasterServer']['usepconnect'] );
+$this->dbobject->select_db($this->registry->config['Database']['dbname']);
+
+//<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+	<plugin active="1" product="vbulletin">
+		<title>Save changes to Joomla User</title>
+		<hookname>userdata_postsave</hookname>
+		<phpcode><![CDATA[//<!-- Begin Joomla-vBridge from WH-SOLUTION -->
+
+$this->dbobject->db_connect(MOS_HOST, 3306, MOS_USER, MOS_PASS, 0);
+$this->dbobject->select_db(MOS_NAME);
+
+$mos_userid = $this->dbobject->query_read("SELECT id FROM " .MOS_PREFIX."users WHERE vb_userid='$userid'");
+
+       
+        if (!$mos_userid){
+           
+        $registerDate = date("Y-m-d H:i:s");
+
+         $this->dbobject->query_write("
+            INSERT INTO " .MOS_PREFIX. "users
+                (name, username, email, password, usertype, block, sendEmail, gid,
+                registerDate, lastvisitDate, activation, params, vb_userid)
+            VALUES
+                (
+                '".$this->fetch_field('username')."',
+                '".$this->fetch_field('username')."',
+                '".$this->fetch_field('email')."',
+                '".$this->fetch_field('password')."',
+                'Registered',
+                '0',
+                '0',
+                '18',
+                '$registerDate',
+                '0',
+                '',
+                '',
+                $userid
+            )
+        ");
+        $user_id = $this->dbobject->insert_id();
+         $this->dbobject->query_write("
+            INSERT INTO " . MOS_PREFIX. "core_acl_aro
+                (section_value, value, order_value, name, hidden)
+            VALUES
+                ('users',
+                $user_id,
+                '0',
+                '".$this->fetch_field('username')."',
+                '0'
+            )
+        ");
+        $aro_id = $this->dbobject->insert_id();
+        $this->dbobject->query_write("
+            INSERT INTO " . MOS_PREFIX. "core_acl_groups_aro_map
+                (group_id, section_value, aro_id)
+            VALUES
+                ('18',
+                '',
+                '".$aro_id."'
+            )
+        ");
+    
+    }else {
+    if ($this->fetch_field('usergroupid') == 1 OR $this->fetch_field('usergroupid') == 3 OR $this->fetch_field('usergroupid') == 4 OR $this->fetch_field('usergroupid') == 8)
+    {
+        $block=", block='1'";
+    } else {
+        $block=", block='0'";
+    }
+    $password=", password ='" . $this->fetch_field('password') . "'";    
+    $username="username ='".$this->fetch_field('username')."',";
+    $email="email ='".$this->fetch_field('email')."'";
+    $this->dbobject->query_write("UPDATE " . MOS_PREFIX. "users SET $username $email $password $block WHERE vb_userid='$userid'");
+}
+
+$this->dbobject->db_connect($this->registry->config['MasterServer']['servername'],
+    $this->registry->config['MasterServer']['port'],
+    $this->registry->config['MasterServer']['username'],
+    $this->registry->config['MasterServer']['password'],
+    $this->registry->config['MasterServer']['usepconnect'] );
+$this->dbobject->select_db($this->registry->config['Database']['dbname']);
+
+
+
+    //<!-- End Joomla-vBridge -->]]></phpcode>
+	</plugin>
+</plugins>

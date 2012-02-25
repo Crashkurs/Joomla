@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- $Id: install.xml 781 2012-01-24 14:17:28Z sisko1990 $ -->
+<extension version="2.5" client="administrator" type="language" method="upgrade">
+    <name>German (DE-CH-AT)</name>
+    <tag>de-DE</tag>
+    <version>2.5.0v1</version>
+    <creationDate>24.01.2012</creationDate>
+    <author>J!German</author>
+    <authorEmail>team@jgerman.de</authorEmail>
+    <authorUrl>www.jgerman.de</authorUrl>
+    <copyright>Copyright (C) 2008 - 2012 J!German. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description><![CDATA[
+    <div align="center">
+      <table border="0" width="90%">
+  	    <tr>
+  		    <td width="100%" colspan="2">
+  		      <div align="center">
+  		        <h3>Deutsche Übersetzung für Joomla! 2.5 von J!German</h3>
+  		      </div>
+  		      <hr />
+  		    </td>
+  	    </tr>
+  	    <tr>
+  		    <td width="20%"><u><strong>Bereich:</strong></u></td>
+  		    <td width="80%">Administrator (Backend)</td>
+  	    </tr>
+  	    <tr>
+  		    <td width="20%"><u><strong>Joomla!-Version:</strong></u></td>
+  		    <td width="80%">2.5.0</td>
+  	    </tr>
+  	    <tr>
+  		    <td width="20%"><u><strong>&Uuml;bersetzungsversion:</strong></u></td>
+  		    <td width="80%">2.5.0v1</td>
+  	    </tr>
+  	    <td width="100%" colspan="2"><hr /></td>
+  	    <tr>
+  		    <td width="20%"><u><strong>J!German-Website:</strong></u></td>
+  		    <td width="80%"><a href="http://www.jgerman.de" target="_blank">http://www.jgerman.de</a></td>
+  	    </tr>
+  	    <tr>
+  		    <td width="100%" colspan="2">
+  		      <strong><font color="#008000">Bitte überprüfen Sie regelmäßig unsere Projektseite, ob Sie noch die aktuelle Übersetzungsversion einsetzen.</font></strong>
+          </td>
+  	    </tr>
+      </table>
+    </div>]]>
+    </description>
+    <files>
+        <filename>index.html</filename>
+        <filename>de-DE.com_admin.ini</filename>
+        <filename>de-DE.com_admin.sys.ini</filename>
+        <filename>de-DE.com_banners.ini</filename>
+        <filename>de-DE.com_banners.sys.ini</filename>
+        <filename>de-DE.com_cache.ini</filename>
+        <filename>de-DE.com_cache.sys.ini</filename>
+        <filename>de-DE.com_categories.ini</filename>
+        <filename>de-DE.com_categories.sys.ini</filename>
+        <filename>de-DE.com_checkin.ini</filename>
+        <filename>de-DE.com_checkin.sys.ini</filename>
+        <filename>de-DE.com_config.ini</filename>
+        <filename>de-DE.com_config.sys.ini</filename>
+        <filename>de-DE.com_contact.ini</filename>
+        <filename>de-DE.com_contact.sys.ini</filename>
+        <filename>de-DE.com_content.ini</filename>
+        <filename>de-DE.com_content.sys.ini</filename>
+        <filename>de-DE.com_cpanel.ini</filename>
+        <filename>de-DE.com_cpanel.sys.ini</filename>
+        <filename>de-DE.com_finder.ini</filename>
+        <filename>de-DE.com_finder.sys.ini</filename>
+        <filename>de-DE.com_installer.ini</filename>
+        <filename>de-DE.com_installer.sys.ini</filename>
+        <filename>de-DE.com_languages.ini</filename>
+        <filename>de-DE.com_languages.sys.ini</filename>
+        <filename>de-DE.com_login.ini</filename>
+        <filename>de-DE.com_login.sys.ini</filename>
+        <filename>de-DE.com_mailto.sys.ini</filename>
+        <filename>de-DE.com_media.ini</filename>
+        <filename>de-DE.com_media.sys.ini</filename>
+        <filename>de-DE.com_menus.ini</filename>
+        <filename>de-DE.com_menus.sys.ini</filename>
+        <filename>de-DE.com_messages.ini</filename>
+        <filename>de-DE.com_messages.sys.ini</filename>
+        <filename>de-DE.com_modules.ini</filename>
+        <filename>de-DE.com_modules.sys.ini</filename>
+        <filename>de-DE.com_newsfeeds.ini</filename>
+        <filename>de-DE.com_newsfeeds.sys.ini</filename>
+        <filename>de-DE.com_plugins.ini</filename>
+        <filename>de-DE.com_plugins.sys.ini</filename>
+        <filename>de-DE.com_redirect.ini</filename>
+        <filename>de-DE.com_redirect.sys.ini</filename>
+        <filename>de-DE.com_search.ini</filename>
+        <filename>de-DE.com_search.sys.ini</filename>
+        <filename>de-DE.com_templates.ini</filename>
+        <filename>de-DE.com_templates.sys.ini</filename>
+        <filename>de-DE.com_users.ini</filename>
+        <filename>de-DE.com_users.sys.ini</filename>
+        <filename>de-DE.com_weblinks.ini</filename>
+        <filename>de-DE.com_weblinks.sys.ini</filename>
+        <filename>de-DE.com_wrapper.ini</filename>
+        <filename>de-DE.com_wrapper.sys.ini</filename>
+        <filename>de-DE.lib_joomla.ini</filename>
+        <filename>de-DE.localise.php</filename>
+        <filename>de-DE.mod_custom.ini</filename>
+        <filename>de-DE.mod_custom.sys.ini</filename>
+        <filename>de-DE.mod_feed.ini</filename>
+        <filename>de-DE.mod_feed.sys.ini</filename>
+        <filename>de-DE.mod_latest.ini</filename>
+        <filename>de-DE.mod_latest.sys.ini</filename>
+        <filename>de-DE.mod_logged.ini</filename>
+        <filename>de-DE.mod_logged.sys.ini</filename>
+        <filename>de-DE.mod_login.ini</filename>
+        <filename>de-DE.mod_login.sys.ini</filename>
+        <filename>de-DE.mod_menu.ini</filename>
+        <filename>de-DE.mod_menu.sys.ini</filename>
+        <filename>de-DE.mod_multilangstatus.ini</filename>
+        <filename>de-DE.mod_multilangstatus.sys.ini</filename>
+        <filename>de-DE.mod_popular.ini</filename>
+        <filename>de-DE.mod_popular.sys.ini</filename>
+        <filename>de-DE.mod_quickicon.ini</filename>
+        <filename>de-DE.mod_quickicon.sys.ini</filename>
+        <filename>de-DE.mod_status.ini</filename>
+        <filename>de-DE.mod_status.sys.ini</filename>
+        <filename>de-DE.mod_submenu.ini</filename>
+        <filename>de-DE.mod_submenu.sys.ini</filename>
+        <filename>de-DE.mod_title.ini</filename>
+        <filename>de-DE.mod_title.sys.ini</filename>
+        <filename>de-DE.mod_toolbar.ini</filename>
+        <filename>de-DE.mod_toolbar.sys.ini</filename>
+        <filename>de-DE.plg_authentication_gmail.ini</filename>
+        <filename>de-DE.plg_authentication_gmail.sys.ini</filename>
+        <filename>de-DE.plg_authentication_joomla.ini</filename>
+        <filename>de-DE.plg_authentication_joomla.sys.ini</filename>
+        <filename>de-DE.plg_authentication_ldap.ini</filename>
+        <filename>de-DE.plg_authentication_ldap.sys.ini</filename>
+        <filename>de-DE.plg_captcha_recaptcha.ini</filename>
+        <filename>de-DE.plg_captcha_recaptcha.sys.ini</filename>
+        <filename>de-DE.plg_content_emailcloak.ini</filename>
+        <filename>de-DE.plg_content_emailcloak.sys.ini</filename>
+        <filename>de-DE.plg_content_finder.ini</filename>
+        <filename>de-DE.plg_content_finder.sys.ini</filename>
+        <filename>de-DE.plg_content_geshi.ini</filename>
+        <filename>de-DE.plg_content_geshi.sys.ini</filename>
+        <filename>de-DE.plg_content_joomla.ini</filename>
+        <filename>de-DE.plg_content_joomla.sys.ini</filename>
+        <filename>de-DE.plg_content_loadmodule.ini</filename>
+        <filename>de-DE.plg_content_loadmodule.sys.ini</filename>
+        <filename>de-DE.plg_content_pagebreak.ini</filename>
+        <filename>de-DE.plg_content_pagebreak.sys.ini</filename>
+        <filename>de-DE.plg_content_pagenavigation.ini</filename>
+        <filename>de-DE.plg_content_pagenavigation.sys.ini</filename>
+        <filename>de-DE.plg_content_vote.ini</filename>
+        <filename>de-DE.plg_content_vote.sys.ini</filename>
+        <filename>de-DE.plg_editors_codemirror.ini</filename>
+        <filename>de-DE.plg_editors_codemirror.sys.ini</filename>
+        <filename>de-DE.plg_editors_none.ini</filename>
+        <filename>de-DE.plg_editors_none.sys.ini</filename>
+        <filename>de-DE.plg_editors_tinymce.ini</filename>
+        <filename>de-DE.plg_editors_tinymce.sys.ini</filename>
+        <filename>de-DE.plg_editors-xtd_article.ini</filename>
+        <filename>de-DE.plg_editors-xtd_article.sys.ini</filename>
+        <filename>de-DE.plg_editors-xtd_image.ini</filename>
+        <filename>de-DE.plg_editors-xtd_image.sys.ini</filename>
+        <filename>de-DE.plg_editors-xtd_pagebreak.ini</filename>
+        <filename>de-DE.plg_editors-xtd_pagebreak.sys.ini</filename>
+        <filename>de-DE.plg_editors-xtd_readmore.ini</filename>
+        <filename>de-DE.plg_editors-xtd_readmore.sys.ini</filename>
+        <filename>de-DE.plg_extension_joomla.ini</filename>
+        <filename>de-DE.plg_extension_joomla.sys.ini</filename>
+        <filename>de-DE.plg_finder_categories.ini</filename>
+        <filename>de-DE.plg_finder_categories.sys.ini</filename>
+        <filename>de-DE.plg_finder_contacts.ini</filename>
+        <filename>de-DE.plg_finder_contacts.sys.ini</filename>
+        <filename>de-DE.plg_finder_content.ini</filename>
+        <filename>de-DE.plg_finder_content.sys.ini</filename>
+        <filename>de-DE.plg_finder_newsfeeds.ini</filename>
+        <filename>de-DE.plg_finder_newsfeeds.sys.ini</filename>
+        <filename>de-DE.plg_finder_weblinks.ini</filename>
+        <filename>de-DE.plg_finder_weblinks.sys.ini</filename>
+        <filename>de-DE.plg_quickicon_extensionupdate.ini</filename>
+        <filename>de-DE.plg_quickicon_extensionupdate.sys.ini</filename>
+        <filename>de-DE.plg_quickicon_joomlaupdate.ini</filename>
+        <filename>de-DE.plg_quickicon_joomlaupdate.sys.ini</filename>
+        <filename>de-DE.plg_search_categories.ini</filename>
+        <filename>de-DE.plg_search_categories.sys.ini</filename>
+        <filename>de-DE.plg_search_contacts.ini</filename>
+        <filename>de-DE.plg_search_contacts.sys.ini</filename>
+        <filename>de-DE.plg_search_content.ini</filename>
+        <filename>de-DE.plg_search_content.sys.ini</filename>
+        <filename>de-DE.plg_search_newsfeeds.ini</filename>
+        <filename>de-DE.plg_search_newsfeeds.sys.ini</filename>
+        <filename>de-DE.plg_search_weblinks.ini</filename>
+        <filename>de-DE.plg_search_weblinks.sys.ini</filename>
+        <filename>de-DE.plg_system_cache.ini</filename>
+        <filename>de-DE.plg_system_cache.sys.ini</filename>
+        <filename>de-DE.plg_system_debug.ini</filename>
+        <filename>de-DE.plg_system_debug.sys.ini</filename>
+        <filename>de-DE.plg_system_finder.ini</filename>
+        <filename>de-DE.plg_system_finder.sys.ini</filename>
+        <filename>de-DE.plg_system_highlight.ini</filename>
+        <filename>de-DE.plg_system_highlight.sys.ini</filename>
+        <filename>de-DE.plg_system_languagecode.ini</filename>
+        <filename>de-DE.plg_system_languagecode.sys.ini</filename>
+        <filename>de-DE.plg_system_languagefilter.ini</filename>
+        <filename>de-DE.plg_system_languagefilter.sys.ini</filename>
+        <filename>de-DE.plg_system_log.ini</filename>
+        <filename>de-DE.plg_system_log.sys.ini</filename>
+        <filename>de-DE.plg_system_logout.ini</filename>
+        <filename>de-DE.plg_system_logout.sys.ini</filename>
+        <filename>de-DE.plg_system_p3p.ini</filename>
+        <filename>de-DE.plg_system_p3p.sys.ini</filename>
+        <filename>de-DE.plg_system_redirect.ini</filename>
+        <filename>de-DE.plg_system_redirect.sys.ini</filename>
+        <filename>de-DE.plg_system_remember.ini</filename>
+        <filename>de-DE.plg_system_remember.sys.ini</filename>
+        <filename>de-DE.plg_system_sef.ini</filename>
+        <filename>de-DE.plg_system_sef.sys.ini</filename>
+        <filename>de-DE.plg_user_contactcreator.ini</filename>
+        <filename>de-DE.plg_user_contactcreator.sys.ini</filename>
+        <filename>de-DE.plg_user_joomla.ini</filename>
+        <filename>de-DE.plg_user_joomla.sys.ini</filename>
+        <filename>de-DE.plg_user_profile.ini</filename>
+        <filename>de-DE.plg_user_profile.sys.ini</filename>
+        <filename>de-DE.tpl_bluestork.ini</filename>
+        <filename>de-DE.tpl_bluestork.sys.ini</filename>
+        <filename>de-DE.tpl_hathor.ini</filename>
+        <filename>de-DE.tpl_hathor.sys.ini</filename>
+        <filename>de-DE.ini</filename>
+        <filename file="meta">de-DE.xml</filename>
+        <filename file="meta">install.xml</filename>
+    </files>
+</extension>

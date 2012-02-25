@@ -1,0 +1,200 @@
+/*
+ * ChronoCMS (chronocms.com)
+ * Copyright 2010 - chronocms.com
+ *
+ * @license		Commercial
+ * Redistributions of files must retain the above copyright notice.
+ */
+/* FORM WIZARD STYLES */
+div.m {background-color: white;}
+.dragable { border: 1px solid #eeeeee; 
+			z-index: 1000; 
+			margin: 9px 0; 
+			padding: 7px 5px; 
+			background: #ffffff;
+			background-image: none; 
+			width: 160px;
+			font-weight: bold; 
+			
+			}
+.toggler { background-color: #f5f5f5; padding: 8px; display: block; border: 1px solid #f0f0f0;}
+.elements_list { margin-bottom: 2px; padding-bottom: 5px;}
+.elements_list .dragable {width: auto; cursor: move; border: 1px solid #eeeeee; margin: 9px 0; padding: 7px 5px; background: url(formwizard/drag.png) no-repeat right center; background-color:white; font-weight: bold; }
+.elements_list .dragable:hover { background-color: #eeeeee; }
+
+
+.droppable { background-color: #f4f4f4; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; padding: 10px 0 1px; min-height: 150px;}
+.droppable input,
+.droppable label { float: left; width: 110px; padding-left: 6px;}
+.droppable input { width: 150px; }
+.droppable .element_tools_visible { position: absolute; text-align: right; right: 12px; top: 18px; width: 55px; }
+.wizard_element { position: relative; padding: 11px 5px 7px; background-color: #fbfbfb; border: 1px solid #dddddd; margin:0 10px 10px 10px;}
+.element_config { padding: 10px 0 0 6px; }
+
+/*#field_settings { margin: 0 5px; padding-top: 10px;}*/
+/*#field_settings .validation_label { border-bottom: 2px solid #eeeeee; margin-top: 10px; background-color: #f2f2f2; padding: 9px 0 9px 5px; width: 100%;}
+#field_settings .ccms_form_element { border-bottom: 0; padding-bottom: 0; margin: 9px 0;}
+#field_settings .cfdiv_text label { width: 90px; }
+#field_settings .cfdiv_text input { width: 170px; }
+#field_settings .required_check { border-bottom: 1px solid #eeeeee; height: 40px;}
+#field_settings .required_check input[type="checkbox"] { float:  left; clear: none !important; margin-left: 35px;}*/
+
+
+.temp_div_container {  display:block; clear: left; padding-left: 30px; margin-left: 85px;}
+.temp_div_container label { width: 70px; } 
+.temp_div_container input[type="checkbox"] { clear: left; }
+#droppable_area_elements input[type="checkbox"],
+#droppable_area_elements input[type="radio"] { width: 30px; padding-left: 0; margin-right: 0; }
+#droppable_area_elements input[type="radio"] { clear: left; }
+.input_checkbox_group_element_view label.text_label,
+.input_radio_element_view label.text_label  { position: absolute; top: 11px; left: 3px; }  
+
+.dragable {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.dragable_action {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.droppable {
+	min-width:100%;
+}
+
+.element_code {
+	display:none;
+}
+
+.element_config {
+	display:none;
+}
+
+.element_tools{
+	display:none;
+}
+
+/*.cx_form_elements{
+	font-family: Tahoma;
+	font-size:12px;
+}*/
+
+.action_label{
+	display: block;
+	float: none !important;
+	width : 85% !important;
+}
+
+.form_event{
+	position: relative;
+	padding: 11px 5px 7px;
+	background-color: #fbfbfb;
+	border: 1px solid #dddddd;
+	margin:0 10px 10px 10px;
+}
+
+.main_event{
+	min-height:100px;
+}
+
+.form_event_label{
+	display: block;
+	float: none !important;
+	width: 80% !important;
+	margin: 0px;
+}
+
+.form_event .clear{
+	height: 0px;
+}
+
+.form_event .wizard_element{
+	padding-top: 1px;
+}
+
+.good_event{
+	background-color: #ccff89;
+}
+
+.bad_event{
+	background-color: #ffaaaa;
+}
+
+.edit_element{
+	cursor : pointer;
+}
+
+.delete_element{
+	cursor : pointer;
+}
+
+.sort_element{
+	cursor : n-resize;
+}
+
+.fixedSaveDiv{
+	position: absolute;/*relative;*/
+	width: 570px;
+	background-color: white;
+	text-align: right;
+	z-index: 99999;
+}
+
+#field_settings {
+	min-height: 500px !important;
+}
+
+#action_settings {
+	min-height: 500px !important;
+}
+
+#actions_accordion {
+	min-height: 400px !important;
+	max-height: 400px !important;
+	overflow: scroll;
+}
+
+.actions_accordion_pane{
+	overflow: auto !important;
+	max-height: 300px;
+}
+
+.elements_accordion_pane{
+	overflow: auto !important;
+	max-height: 300px;
+}
+
+#sbox-btn-apply {
+	position: absolute;
+	width: 64px;
+	height: 24px;
+	right: -67px;
+	top: 25px;
+	background: url(../images/confirm.png) no-repeat scroll left center white;
+	text-align: right;
+	border: none;
+	color: black;
+	text-decoration: none;
+	line-height: 22px;
+	padding: 3px 3px 3px 0px;
+	font-weight: bold;
+}
+
+.sbox-window-ie6 #sbox-btn-apply {
+	background-image: url(../images/apply.png);
+}
+
+#EventsOperations{
+	padding: 0px 5px;
+	margin: 0px 10px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.add_event{
+	float: left;
+	margin: 3px 0px;
+}

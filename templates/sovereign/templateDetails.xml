@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>Sovereign</name>
+	<creationDate>30.01.2012</creationDate>
+	<author>Mats Wilhelm</author>
+	<authorEmail>mats.wilhelm@gmx.de</authorEmail>
+	<copyright>Copyright (C) 2012  Mats Wilhelm. All rights reserved.</copyright>
+	<version>2.5.0</version>
+	<description>Sovereign Template</description>
+
+	<files>
+		<folder>css</folder>
+    <folder>images</folder>
+    <filename>swtor.jpg</filename>
+    <filename>header-bg.jpg</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>logo</position>
+		<position>mainmenu</position>
+		<position>login</position>
+		<position>submenu</position>
+		<position>mitglieder</position>
+		<position>news</position>
+    <position>bewerbung</position>
+    <position>planer</position>
+    <position>profil</position>
+	</positions>
+</extension>

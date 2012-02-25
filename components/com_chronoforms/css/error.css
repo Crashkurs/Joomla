@@ -1,0 +1,8 @@
+span.cf_alert {
+	background:#FFD5D5 url(images/alert.png) no-repeat scroll 10px 50%;
+	border:1px solid #FFACAD;
+	color:#CF3738;
+	display:block;
+	margin:15px 0pt;
+	padding:0px 10px 0px 36px;
+}

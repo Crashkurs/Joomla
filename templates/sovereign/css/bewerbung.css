@@ -1,0 +1,5 @@
+.item-page p, .item-page form{
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+  }
