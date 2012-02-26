@@ -83,10 +83,10 @@ jimport( 'joomla.utilities.date');
 					<th class="rp_header"><?php echo JText::_('JGLOBAL_USERNAME');?></th>
 					<?php endif; ?>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_LEVEL');?></th>
-					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_GENDER');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_RACE');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_CLASS');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_RANK');?></th>
+          <th class="rp_header">DKP</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -97,10 +97,10 @@ jimport( 'joomla.utilities.date');
 					<td><a href="<?php echo "#";?>"><?php echo $character['username'];?></a>
 					<?php endif; ?>
 					<td><?php echo $character['char_level']; ?></td>
-					<td><?php echo $character['gender_name']; ?></td>
 					<td><?php echo $character['race_name']; ?></td>
 					<td class="<?php echo $character['class_css'];?>"><?php echo $character['class_name']; ?></td>
 					<td><?php echo $this->ranks[$character['rank']]; ?></td>
+          <td><?php echo $this->dkp;?></td>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
