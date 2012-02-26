@@ -23,7 +23,7 @@ switch ($version->RELEASE) {
 ?>
 
 <form action="index.php" method="post" name="adminForm" id="adminForm">
-<div class="width-30 fltlft col30">
+<div class="width-30 fltlft col30" style="background-color: white;">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'JDETAILS' ); ?></legend>
 		<ul class="adminformlist">
@@ -116,9 +116,9 @@ switch ($version->RELEASE) {
 	</ul>
 	</fieldset>
 </div>
-<div class="width-65 fltrt col65">
+<div class="width-65 fltrt col65" style="background-color:#FFFFFF;">
 	<?php if ($this->raid->raid_id > 0 ) : ?>
-	<iframe style="width:100%;height:500px;border:none;" src="<?php echo JURI::base(); ?>../index.php?option=com_raidplanner&view=event&task=viewevent&tmpl=component&id=<?php echo $this->raid->raid_id;?>"></iframe>
+	<iframe style="width:100%;height:500px;border:none;background-color:#FFFFFF;" src="<?php echo JURI::base(); ?>../index.php?option=com_raidplanner&view=event&task=viewevent&tmpl=component&id=<?php echo $this->raid->raid_id;?>"></iframe>
 	<?php endif; ?>
 </div>
 <div class="clr"></div>

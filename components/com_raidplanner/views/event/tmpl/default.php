@@ -14,7 +14,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 $dateFormat = RaidPlannerHelper::shortDateFormat();
 $hasChars = !empty($this->characters);
 ?>
-<table class="rp_header_container">
+<table class="rp_header_container" style="background-color: white;">
 	<tr>
 		<td class="rp_header">
 		<?php if ($this->event->icon_name) : ?>
@@ -113,7 +113,7 @@ $hasChars = !empty($this->characters);
 		</td>
 	</tr>
 </table>
-<table class="rp_container">
+<table class="rp_container" style="background-color: white;">
 	<tr class="rp_event_buttons">
 		<td>
 			<div>
@@ -301,7 +301,7 @@ $hasChars = !empty($this->characters);
 					</tr>
 					<tr>
 						<td colspan="4">
-							<input type="submit" name="SubmitButton" value="<?php echo JText::_('Save');?>" />
+							<input type="submit" name="SubmitButton" value="Speichern" />
 							<input type="hidden" name="option" value="com_raidplanner" />
 							<input type="hidden" name="task" value="signup" />
 							<input type="hidden" name="raid_id" value="<?php echo $this->event->raid_id; ?>" />
