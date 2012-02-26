@@ -14,7 +14,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 $dateFormat = RaidPlannerHelper::shortDateFormat();
 $hasChars = !empty($this->characters);
 ?>
-<table class="rp_header_container" style="background-color: #FFFFFF;">
+<table class="rp_header_container">
 	<tr>
 		<td class="rp_header">
 		<?php if ($this->event->icon_name) : ?>
@@ -113,7 +113,7 @@ $hasChars = !empty($this->characters);
 		</td>
 	</tr>
 </table>
-<table class="rp_container" style="background-color: #FFFFFF;">
+<table class="rp_container">
 	<tr class="rp_event_buttons">
 		<td>
 			<div>

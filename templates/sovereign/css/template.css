@@ -65,7 +65,7 @@ body{
   padding-left: 5%;
   background-repeat: no-repeat;
   padding-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   min-height: 920px;
   }
 .login{
@@ -168,7 +168,7 @@ body{
 .items-leading * p, .item-page p, .item p{
   padding-top: 20px;
   }
-.leading-0, .item{
+.leading-0, .leading-1, .leading-2, .leading-3, .leading-4, .item{
   padding: 5px 3px 15px 15px;
   -moz-border-radius: 10px;
   border-style: solid;
@@ -213,6 +213,7 @@ form ul li a{
   color: black;
   }
 .rights{
+  float: left;
   color: white;
   }
 input.bewerbung0{

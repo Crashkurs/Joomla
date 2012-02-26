@@ -45,7 +45,7 @@ $function	= JRequest::getCmd('function', '');
 	<tr id="rp_event_newchar" style="display:none;">
 		<td>
 			<form action="<?php echo JRoute::_('index.php');?>" method="post" id="rp_edit_form">
-				<label>hi<?php echo JText::_('COM_RAIDPLANNER_CHARACTER_NAME');?>:<input type="text" id="char_name" name="char_name" value="<?php echo @$this->character->char_name;?>"></label><br />
+				<label><?php echo JText::_('COM_RAIDPLANNER_CHARACTER_NAME');?>:<input type="text" id="char_name" name="char_name" value="<?php echo @$this->character->char_name;?>"></label><br />
 				<label><?php echo JText::_('COM_RAIDPLANNER_CLASS');?><select name="class_id" id="class_id">
 					<?php foreach ($this->classes as $class_id => $class) : ?>
 					<option value="<?php echo $class_id;?>"<?php if ($class_id==@$this->character->class_id) {?> selected="selected"<?php } ?>><?php echo $class->class_name;?></option>

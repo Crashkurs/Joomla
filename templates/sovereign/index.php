@@ -5,7 +5,7 @@ jimport( 'joomla.access.access' );
 JHtml::_('behavior.framework', true);
 
 $app                = JFactory::getApplication();
-$doc				= JFactory::getDocument();
+$doc        = JFactory::getDocument();
 $templateparams     = $app->getTemplate(true)->params;
 $db = JFactory::getDBO();
 ?>
@@ -82,13 +82,14 @@ $db = JFactory::getDBO();
             {
             ?>
             <div class="news">
-              <jdoc:include type="modules" name="news" />
+              <jdoc:include type="modules" name="news" /><br><br>
+              <jdoc:include type="modules" name="kontostand" />
             </div>
             <?
             }           
            
            if(strlen(JURI::current()) > strlen(JURI::base()))
-           { 
+           {
              if(substr(JURI::current(),strlen(JURI::base()),16) == "index.php/guides")
              {
               ?>

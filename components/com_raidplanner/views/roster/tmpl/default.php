@@ -68,36 +68,39 @@ jimport( 'joomla.utilities.date');
 			});
 		</script>
 		<?php endif; ?>
-		
+		<h2><a href="<?php echo $this->guildinfo->params->link;?>"<?php if ($this->guildinfo->params->armory) {?> target="_blank"<?php } ?>><?php echo $this->guildinfo->guild_name;?></a></h2>
+		<strong>
+			<?php echo JText::_('COM_RAIDPLANNER_LEVEL');?> <?php echo $this->guildinfo->guild_level;?> <?php echo $this->guildinfo->params->side;?> <?php echo JText::_('COM_RAIDPLANNER_GUILD');?><br />
+			<?php echo $this->guildinfo->guild_realm;?> - <?php echo strtoupper($this->guildinfo->guild_region);?>
+		</strong>
 	</div>
 	<div class="rp_roster_table">
 		<table class="rp_container" id="roster_table">
 			<thead>
 				<tr class="rp_header">
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_CHARACTER_NAME');?></th>
-					<?php if ($this->show_account == 0) : ?>
+					<?php if ($this->show_account == 1) : ?>
 					<th class="rp_header"><?php echo JText::_('JGLOBAL_USERNAME');?></th>
 					<?php endif; ?>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_LEVEL');?></th>
+					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_GENDER');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_RACE');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_CLASS');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_RANK');?></th>
-          <th class="rp_header"><?php echo JText::_('DKP');?></th>
 				</tr>
 			</thead>
 			<tbody>
 			<?php foreach($this->characters as $character) : ?>
 				<tr class="rp_roster">
-        
-					<td><center><a><b><?php echo $character['char_name']; ?></b></a></center></td>
-					<?php if ($this->show_account == 0) : ?>
-					<td><center><a href="<?php echo "#";?>"><?php echo $character['username'];?></a>
-					<?php endif; ?></center></td>
-					<td><center><?php echo $character['char_level']; ?></center></td>
-					<td><center><?php echo $character['race_name']; ?></center></td>
-					<td class="<?php echo $character['class_css'];?>"><center><?php echo $character['class_name']; ?></center></td>
-					<td><center><?php echo $this->ranks[$character['rank']]; ?></center></td>
-          <td><center><?php echo $character['dkp']; ?></center></td>
+					<td><a href="<?php echo sprintf($this->guildinfo->params->char_link, rawurlencode($this->guildinfo->guild_realm), rawurlencode($character['char_name']) );?>"<?php if ($this->guildinfo->params->armory) {?> target="_blank"<?php } ?>><?php echo $character['char_name']; ?></a></td>
+					<?php if ($this->show_account == 1) : ?>
+					<td><a href="<?php echo "#";?>"><?php echo $character['username'];?></a>
+					<?php endif; ?>
+					<td><?php echo $character['char_level']; ?></td>
+					<td><?php echo $character['gender_name']; ?></td>
+					<td><?php echo $character['race_name']; ?></td>
+					<td class="<?php echo $character['class_css'];?>"><?php echo $character['class_name']; ?></td>
+					<td><?php echo $this->ranks[$character['rank']]; ?></td>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>

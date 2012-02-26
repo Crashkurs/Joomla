@@ -43,10 +43,7 @@ switch ($version->RELEASE) {
 		</li>
 		<li>
 			<label for="start_time"><?php echo JText::_( 'COM_RAIDPLANNER_START_TIME' ); ?>:</label>
-			<?php echo JHTML::_('calendar', JHTML::_('date', 
-      $this->raid->start_time, $dateformat),
-       'start_time', 
-       'start_time', '%Y-%m-%d %H:%M:%S' );?>
+			<?php echo JHTML::_('calendar', JHTML::_('date', $this->raid->start_time, $dateformat), 'start_time', 'start_time', '%Y-%m-%d %H:%M:%S' );?>
 		</li>
 		<li>
 			<label for="duration_mins"><?php echo JText::_( 'COM_RAIDPLANNER_DURATION' ); ?>:</label>
@@ -121,7 +118,7 @@ switch ($version->RELEASE) {
 </div>
 <div class="width-65 fltrt col65">
 	<?php if ($this->raid->raid_id > 0 ) : ?>
-	<iframe style="width:100%;height:500px;border:none;background-color:#FFFFFF;" src="<?php echo JURI::base(); ?>../index.php?option=com_raidplanner&view=event&task=viewevent&tmpl=component&id=<?php echo $this->raid->raid_id;?>"></iframe>
+	<iframe style="width:100%;height:500px;border:none;" src="<?php echo JURI::base(); ?>../index.php?option=com_raidplanner&view=event&task=viewevent&tmpl=component&id=<?php echo $this->raid->raid_id;?>"></iframe>
 	<?php endif; ?>
 </div>
 <div class="clr"></div>

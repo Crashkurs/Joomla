@@ -62,7 +62,7 @@ class RaidPlannerModelCharacter extends JModel
 				$char_level = JRequest::getVar('char_level', null, 'default', 'INT');
 				$rank = JRequest::getVar('rank', null, 'default', 'INT');
 				$guild_id = JRequest::getVar('guild_id', null, 'default', 'INT');
-		    $dkp = JRequest::getVar('dkp', null, 'default', 'INT');
+		
 				// update the record
 				$query = "UPDATE #__raidplanner_character SET"
 						. " char_name=".$db->Quote($char_name)
