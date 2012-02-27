@@ -100,7 +100,8 @@ jimport( 'joomla.utilities.date');
 					<td><center><?php echo $character['race_name']; ?></center></td>
 					<td class="<?php echo $character['class_css'];?>"><center><?php echo $character['class_name']; ?></center></td>
 					<td><center><?php echo $this->ranks[$character['rank']]; ?></center></td>
-          <td><center><?php //echo $character['dkp'];?>
+          <td><center><?php //echo $character['dkp'];
+          ?>
           0
           </center></td>
 				</tr>
