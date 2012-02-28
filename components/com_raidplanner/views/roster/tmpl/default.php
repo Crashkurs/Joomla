@@ -68,7 +68,7 @@ jimport( 'joomla.utilities.date');
 			});
 		</script>
 		<?php endif; ?>
-		<h2><a href="<?php echo $this->guildinfo->params->link;?>"<?php if ($this->guildinfo->params->armory) {?> target="_blank"<?php } ?>><?php echo $this->guildinfo->guild_name;?></a></h2>
+		<h2><?php echo $this->guildinfo->guild_name;?></h2>
 		
 	</div>
 	<div class="rp_roster_table">
