@@ -69,19 +69,13 @@ jimport( 'joomla.utilities.date');
 		</script>
 		<?php endif; ?>
 		<h2><a href="<?php echo $this->guildinfo->params->link;?>"<?php if ($this->guildinfo->params->armory) {?> target="_blank"<?php } ?>><?php echo $this->guildinfo->guild_name;?></a></h2>
-		<strong>
-			<?php echo JText::_('COM_RAIDPLANNER_LEVEL');?> <?php echo $this->guildinfo->guild_level;?> <?php echo $this->guildinfo->params->side;?> <?php echo JText::_('COM_RAIDPLANNER_GUILD');?><br />
-			<?php echo $this->guildinfo->guild_realm;?> - <?php echo strtoupper($this->guildinfo->guild_region);?>
-		</strong>
+		
 	</div>
 	<div class="rp_roster_table">
 		<table class="rp_container" id="roster_table">
 			<thead>
 				<tr class="rp_header">
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_CHARACTER_NAME');?></th>
-					<?php if ($this->show_account == 1) : ?>
-					<th class="rp_header"><?php echo JText::_('JGLOBAL_USERNAME');?></th>
-					<?php endif; ?>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_LEVEL');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_RACE');?></th>
 					<th class="rp_header"><?php echo JText::_('COM_RAIDPLANNER_CLASS');?></th>
@@ -92,10 +86,7 @@ jimport( 'joomla.utilities.date');
 			<tbody>
 			<?php foreach($this->characters as $character) : ?>
 				<tr class="rp_roster">
-					<td><a href="<?php echo sprintf($this->guildinfo->params->char_link, rawurlencode($this->guildinfo->guild_realm), rawurlencode($character['char_name']) );?>"<?php if ($this->guildinfo->params->armory) {?> target="_blank"<?php } ?>><center><?php echo $character['char_name']; ?></a></center></td>
-					<?php if ($this->show_account == 1) : ?>
-					<td><a href="<?php echo "#";?>"><center><?php echo $character['username'];?></center></a>
-					<?php endif; ?>
+					<td><center><?php echo $character['char_name']; ?></center></td>
 					<td><center><?php echo $character['char_level']; ?></center></td>
 					<td><center><?php echo $character['race_name']; ?></center></td>
 					<td class="<?php echo $character['class_css'];?>"><center><?php echo $character['class_name']; ?></center></td>
