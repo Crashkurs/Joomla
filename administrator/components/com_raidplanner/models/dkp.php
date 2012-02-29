@@ -35,7 +35,7 @@ class RaidPlannerModelDKP extends JModel
 		
 		// In case limit has been changed, adjust it
 		$this->setState('filter_char_level_min', 50);
-		$this->setState('filter_char_level_max', 50);
+		$this->setState('filter_char_level_max', 150);
 	}
 
 	function _buildContentOrderBy()

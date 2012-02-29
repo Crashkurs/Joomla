@@ -24,7 +24,6 @@ $db = JFactory::getDBO();
             $zahl = $db->getNumRows();
             $result = $db->loadObjectList();
             $user_right = null;
-            
             if($zahl > 0)
             {
               $user_right = $result[0]->group_id;

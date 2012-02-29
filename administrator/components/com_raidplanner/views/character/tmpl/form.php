@@ -62,6 +62,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 			<label for="guild_id"><?php echo JText::_( 'COM_RAIDPLANNER_GUILD' ); ?>:</label>
 			<?php echo JHTML::_('select.genericlist', $this->guilds, 'guild_id', '', 'guild_id', 'guild_name', $this->character->guild_id); ?>
 		</li>
+    <li>
+      <label for="dkp"><?php echo JText::_( 'COM_RAIDPLANNER_DKP' ); ?>:</label>
+      <input class="text_area" type="text" name="dkp" id="dkp" size="10" maxlength="2" value="<?php echo $this->character->dkp;?>" />
+    </li>
 	</ul>
 	</fieldset>
 </div>

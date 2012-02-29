@@ -13,7 +13,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
 <form action="index.php" method="post" name="adminForm">
 <div id="editcell">
-		Hier kannst du die DKP eintragen und ver&auml;ndern.<br><br>
+		Dieser Bereich funktioniert zurzeit nur zum Anzeigen von DKP! Bitte benutze die Character&uuml;bersicht, um DKP zu editieren.<br><br>
   <table class="adminlist">
   <thead><tr>
     <th width="20">
