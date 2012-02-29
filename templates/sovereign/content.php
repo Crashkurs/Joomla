@@ -20,7 +20,7 @@
               $db->query();
               if($db->getNumRows() > 0)
               {
-                echo '<div class=edit><center><form name="editchar" method="post" action="'.JURI::base().'index.php/charakter-bearbeiten" >';
+                echo '<div class=edit><center><form name="editchar" method="post" action="'.JURI::base().'/index.php/charakter-bearbeiten" >';
                 echo "Hier kannst du deine Charaktere f&uuml;r den Raidplaner bearbeiten<br><br>";
                 echo "<select name=charedit>";
                 $zahl = $db->getNumRows();
@@ -129,7 +129,7 @@
                   if($x%8 == 7)echo "<br>";
                   echo "</div>";
                 }
-                  echo '<br /><br /><center><form name=bewerbungen method=post action="/bewerbung"><br>
+                  echo '<br /><br /><center><form name=bewerbungen method=post action="/index.php/bewerbung"><br>
                   <input type="text" name="charname" value="Name" readonly/><br>
                   <input type="text" name="level" value="Level" readonly/><br>
                   <select name="klasse" disabled><option value="0">Klasse</option><option value="1">Kopfgeldj&auml;ger</option><option value="2">Sith-Krieger</option><option value="3">Imperialer Agent</option><option value="4">Sith-Inquisitor</option></select><br>
