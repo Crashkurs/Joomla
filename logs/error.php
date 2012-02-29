@@ -22,3 +22,4 @@
 2012-02-15	14:37:17	INFO	92.50.123.73	Joomla FAILURE: 	Benutzername und Passwort falsch oder das Benutzerkonto existiert noch nicht!
 2012-02-15	14:37:26	INFO	92.50.123.73	Joomla FAILURE: 	Benutzername und Passwort falsch oder das Benutzerkonto existiert noch nicht!
 2012-02-15	14:37:39	INFO	92.50.123.73	Joomla FAILURE: 	Benutzername und Passwort falsch oder das Benutzerkonto existiert noch nicht!
+2012-02-29	18:50:10	INFO	127.0.0.1	Joomla FAILURE: 	Ein leeres Passwort ist nicht zulässig

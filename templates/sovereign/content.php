@@ -20,7 +20,7 @@
               $db->query();
               if($db->getNumRows() > 0)
               {
-                echo '<div class=edit><center><form name="editchar" method="post" action="./charakter-bearbeiten" >';
+                echo '<div class=edit><center><form name="editchar" method="post" action="'.JURI::base().'index.php/charakter-bearbeiten" >';
                 echo "Hier kannst du deine Charaktere f&uuml;r den Raidplaner bearbeiten<br><br>";
                 echo "<select name=charedit>";
                 $zahl = $db->getNumRows();
@@ -72,12 +72,12 @@
                       }
                       default: echo "<div style='background-color:red'>Deine Bewerbung wurde nicht gefunden!</div>";break;
                     }
-                    echo "</b><br><a href='/bewerbung'>Zur&uuml;ck zur &Uuml;bersicht</a></div>";
+                    echo "</b><br><a href='".JURI::current()."'>Zur&uuml;ck zur &Uuml;bersicht</a></div>";
                   }else{
                     //echo "<style>";
                     //include ('/css/bewerbung.css');
                     echo "</style><center><div style='padding-top: 50px'>F&uuml;r diesen Charakter gibt es keine Bewerbung!</div>";
-                    echo "<a style='text-decoration: none, color: black' href='/bewerbung'>Zur&uuml;ck zur &Uuml;bersicht</a></center>";
+                    echo "<a style='text-decoration: none, color: black' href='".JURI::current()."'>Zur&uuml;ck zur &Uuml;bersicht</a></center>";
                   }
                 }else{
                   $data =new stdClass();//Bewerbung eintragen
