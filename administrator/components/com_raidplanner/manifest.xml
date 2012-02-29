@@ -67,6 +67,7 @@
 			<menu view="roles">COM_RAIDPLANNER_ROLES</menu>
 			<menu view="classes">COM_RAIDPLANNER_CLASSES</menu>
 			<menu view="races">COM_RAIDPLANNER_RACES</menu>
+      <menu view="dkp">COM_RAIDPLANNER_DKP</menu>
 		</submenu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder

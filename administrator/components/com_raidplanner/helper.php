@@ -152,6 +152,7 @@ class RaidPlannerHelper
 		JSubMenuHelper::addEntry(JText::_('COM_RAIDPLANNER_ROLES'), 'index.php?option=com_raidplanner&view=roles', ($view == 'roles'));
 		JSubMenuHelper::addEntry(JText::_('COM_RAIDPLANNER_CLASSES'), 'index.php?option=com_raidplanner&view=classes', ($view == 'classes'));
 		JSubMenuHelper::addEntry(JText::_('COM_RAIDPLANNER_RACES'), 'index.php?option=com_raidplanner&view=races', ($view == 'races'));
+    JSubMenuHelper::addEntry(JText::_('COM_RAIDPLANNER_DKP'), 'index.php?option=com_raidplanner&view=dkp', ($view == 'dkp'));
 	}
 	
 	public static function getTimezone( $user = null )
@@ -218,6 +219,7 @@ class RaidPlannerHelper
 		
 		return $db->loadObjectList('group_id');
 	}
+  
 	
 	public static function getPermission($permission, $user_id=null)
 	{
