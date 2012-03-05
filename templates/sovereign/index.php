@@ -8,6 +8,7 @@ $app                = JFactory::getApplication();
 $doc        = JFactory::getDocument();
 $templateparams     = $app->getTemplate(true)->params;
 $db = JFactory::getDBO();
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
@@ -105,7 +106,7 @@ $db = JFactory::getDBO();
                            
         </div>
         <div class="rights">
-        <center>Star Wars: The Old Republic All rights reserved</center>
+        Star Wars: The Old Republic All rights reserved
         </div>
       </div>
       </body>

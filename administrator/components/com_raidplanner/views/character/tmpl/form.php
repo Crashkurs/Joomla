@@ -64,7 +64,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		</li>
     <li>
       <label for="dkp"><?php echo JText::_( 'COM_RAIDPLANNER_DKP' ); ?>:</label>
-      <input class="text_area" type="text" name="dkp" id="dkp" size="10" maxlength="2" value="<?php echo $this->character->dkp;?>" />
+      <input class="text_area" type="text" name="dkp" id="dkp" size="10" value="<?php echo $this->character->dkp;?>" />
     </li>
 	</ul>
 	</fieldset>
